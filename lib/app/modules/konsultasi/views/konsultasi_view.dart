@@ -15,17 +15,6 @@ class KonsultasiView extends GetView<KonsultasiController> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 12),
-          child: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(
-              Icons.arrow_back_ios_rounded,
-            ),
-          ),
-        ),
         title: Text(
           'Konsultasi',
           style: TextStyle(
