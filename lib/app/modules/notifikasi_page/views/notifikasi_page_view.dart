@@ -12,10 +12,6 @@ class NotifikasiPageView extends GetView<NotifikasiPageController> {
       appBar: AppBar(
         title: const Row(
           children: [
-            Icon(
-              Icons.chevron_left_rounded,
-              size: 40,
-            ),
             Text(
               'Notifikasi',
               style: TextStyle(
