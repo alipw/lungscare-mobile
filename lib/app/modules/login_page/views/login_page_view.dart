@@ -128,7 +128,7 @@ class LoginPageView extends GetView<LoginPageController> {
                           child: Container(
                             height: 365,
                             width: double.infinity,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(16),
@@ -140,24 +140,24 @@ class LoginPageView extends GetView<LoginPageController> {
                                 padding: const EdgeInsets.all(24.0),
                                 child: Column(
                                   children: [
-                                    Text(
+                                    const Text(
                                       "Lupa Password?",
                                       style: TextStyle(
                                         fontSize: 26,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 10,
                                     ),
-                                    Text(
+                                    const Text(
                                       "Jangan khawatir! Hal ini akan terjadi, silahkan masukan email anda.",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         color: Colors.grey,
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 32,
                                     ),
                                     TextField(
@@ -180,7 +180,7 @@ class LoginPageView extends GetView<LoginPageController> {
                                         hintText: "Masukkan email",
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 26,
                                     ),
                                     SizedBox(
@@ -196,7 +196,7 @@ class LoginPageView extends GetView<LoginPageController> {
                                               vertical: 16.5),
                                         ),
                                         onPressed: () {},
-                                        child: Text(
+                                        child: const Text(
                                           "Kirim",
                                           style: TextStyle(
                                             color: Colors.white,

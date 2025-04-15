@@ -183,12 +183,12 @@ class RegisterPageView extends GetView<RegisterPageController> {
                   RichText(
                     text: TextSpan(
                       text: "Dengan masuk atau mendaftar, kamu menyetujui ",
-                      style: TextStyle(color: Colors.grey),
+                      style: const TextStyle(color: Colors.grey),
                       children: [
                         TextSpan(
                             text: "Ketentuan layanan",
                             style: TextStyle(color: primaryColor)),
-                        TextSpan(
+                        const TextSpan(
                             text: " dan ",
                             style: TextStyle(color: Colors.grey)),
                         TextSpan(

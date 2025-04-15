@@ -65,7 +65,7 @@ class AnalisisPageView extends GetView<AnalisisPageController> {
                               ],
                             );
                           } else {
-                            return Text('No Data');
+                            return const Text('No Data');
                           }
                         },
                       ),

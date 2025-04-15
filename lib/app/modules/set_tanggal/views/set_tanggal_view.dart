@@ -6,17 +6,17 @@ import 'package:motion_hack/app/shared/theme/color.dart';
 import '../controllers/set_tanggal_controller.dart';
 
 class SetTanggalView extends GetView<SetTanggalController> {
-  SetTanggalView({Key? key}) : super(key: key);
+  const SetTanggalView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 132,
           ),
-          Text(
+          const Text(
             'Kapan kamu\nberhenti merokok?',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -26,10 +26,10 @@ class SetTanggalView extends GetView<SetTanggalController> {
               fontWeight: FontWeight.w700,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
-          Text(
+          const Text(
             'Semua demi kesehatan anda, mulai \nberhenti merokok sekarang.',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -38,17 +38,17 @@ class SetTanggalView extends GetView<SetTanggalController> {
               fontWeight: FontWeight.w400,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Text(
+          const Text(
             "24 Agustus 2024",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           ElevatedButton(
@@ -94,7 +94,7 @@ class SetTanggalView extends GetView<SetTanggalController> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 35,
           ),
           Padding(

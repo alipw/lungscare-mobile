@@ -15,7 +15,7 @@ class KonsultasiView extends GetView<KonsultasiController> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text(
+        title: const Text(
           'Konsultasi',
           style: TextStyle(
             fontWeight: FontWeight.bold,
@@ -62,7 +62,7 @@ class KonsultasiView extends GetView<KonsultasiController> {
                         BoxShadow(
                           color: Colors.grey.withOpacity(0.5),
                           blurRadius: 3,
-                          offset: Offset(0, 1),
+                          offset: const Offset(0, 1),
                         )
                       ],
                     ),
@@ -70,10 +70,10 @@ class KonsultasiView extends GetView<KonsultasiController> {
                     width: 294,
                     child: TextField(
                       decoration: InputDecoration(
-                        contentPadding: EdgeInsets.symmetric(
+                        contentPadding: const EdgeInsets.symmetric(
                           vertical: 3,
                         ),
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                           color: Color(0xFF8B849B),
                           fontSize: 12,
                           fontFamily: 'Inter',
@@ -91,7 +91,7 @@ class KonsultasiView extends GetView<KonsultasiController> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
                   SizedBox(
@@ -114,10 +114,10 @@ class KonsultasiView extends GetView<KonsultasiController> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 37,
               ),
-              Text(
+              const Text(
                 'Konsultasi online dengan dokter terbaik!',
                 style: TextStyle(
                   color: Color(0xFF00060F),
@@ -126,7 +126,7 @@ class KonsultasiView extends GetView<KonsultasiController> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              Text(
+              const Text(
                 'Temukan dan konsultasikan dengan dokter pilihanmu',
                 style: TextStyle(
                   color: Color(0xFF808B9A),
@@ -135,7 +135,7 @@ class KonsultasiView extends GetView<KonsultasiController> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 4,
               ),
               CardDoctor(
@@ -144,7 +144,7 @@ class KonsultasiView extends GetView<KonsultasiController> {
                 harga: "30.000",
                 image: "stefanus",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 17,
               ),
               CardDoctor(
@@ -153,7 +153,7 @@ class KonsultasiView extends GetView<KonsultasiController> {
                 harga: "45.000",
                 image: "agita",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 17,
               ),
               CardDoctor(

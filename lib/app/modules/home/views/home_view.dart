@@ -8,7 +8,7 @@ import 'package:motion_hack/app/shared/widget/card_doctor.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
-  HomeView({Key? key}) : super(key: key);
+  const HomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +70,7 @@ class HomeView extends GetView<HomeController> {
                               ],
                             );
                           } else {
-                            return Text('No Data');
+                            return const Text('No Data');
                           }
                         },
                       ),

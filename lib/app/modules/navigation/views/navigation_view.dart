@@ -21,9 +21,9 @@ class NavigationView extends GetView<NavigationController> {
               index: controller.tabIndex.value,
               children: [
                 HomeView(),
-                KonsultasiView(),
-                NotifikasiPageView(),
-                ProfilePageView(),
+                const KonsultasiView(),
+                const NotifikasiPageView(),
+                const ProfilePageView(),
               ],
             ),
           ),

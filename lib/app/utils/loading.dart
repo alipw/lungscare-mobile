@@ -5,7 +5,7 @@ class loadingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         body: Center(
           child: CircularProgressIndicator(),

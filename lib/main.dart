@@ -14,11 +14,13 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final authC = Get.put(AuthController(), permanent: true);
+  static final authC = Get.put(AuthController(), permanent: true);
+
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>(
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
               getPages: AppPages.routes,
             );
           }
-          return loadingView();
+          return const loadingView();
         });
   }
 }

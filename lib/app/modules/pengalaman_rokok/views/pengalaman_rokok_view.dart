@@ -18,10 +18,10 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 73,
                 ),
-                Text(
+                const Text(
                   "Pengalaman Merokok",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -31,7 +31,7 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                Text(
+                const Text(
                   'Dengan ini, kami dapat merekomendasikan preferensimu yang sesuai denganmu.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -41,7 +41,7 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 33,
                 ),
                 Card(
@@ -57,7 +57,7 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           'Berapa batang rokok yang kamu isap per hari?',
                           style: TextStyle(
                             color: Color(0xFF191D30),
@@ -66,7 +66,7 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 14,
                         ),
                         Row(
@@ -76,7 +76,7 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                               onPressed: () {
                                 controller.decrement();
                               },
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.remove,
                                 color: Colors
                                     .white, // Assuming 'white' is defined somewhere
@@ -86,31 +86,31 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 backgroundColor:
                                     primaryColor, // Change to your primary color
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 12,
                             ),
                             Obx(
                               () => Text(
                                 "${controller.count}",
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16,
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 12,
                             ),
                             IconButton(
                               onPressed: () {
                                 controller.increment();
                               },
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.add,
                                 color: Colors
                                     .white, // Assuming 'white' is defined somewhere
@@ -120,17 +120,17 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 backgroundColor:
                                     primaryColor, // Change to your primary color
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 19,
                         ),
-                        Text(
+                        const Text(
                           'Berapa banyak batang rokok dalam satu bungkus?',
                           style: TextStyle(
                             color: Color(0xFF191D30),
@@ -139,7 +139,7 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 14,
                         ),
                         Row(
@@ -149,7 +149,7 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                               onPressed: () {
                                 controller.decrement2();
                               },
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.remove,
                                 color: Colors
                                     .white, // Assuming 'white' is defined somewhere
@@ -159,31 +159,31 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 backgroundColor:
                                     primaryColor, // Change to your primary color
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 12,
                             ),
                             Obx(
                               () => Text(
                                 "${controller.count2}",
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16,
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 12,
                             ),
                             IconButton(
                               onPressed: () {
                                 controller.increment2();
                               },
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.add,
                                 color: Colors
                                     .white, // Assuming 'white' is defined somewhere
@@ -193,17 +193,17 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 backgroundColor:
                                     primaryColor, // Change to your primary color
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 19,
                         ),
-                        Text(
+                        const Text(
                           'Berapa harga satu bungkus rokok?',
                           style: TextStyle(
                             color: Color(0xFF191D30),
@@ -212,7 +212,7 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         TextField(
@@ -236,7 +236,7 @@ class PengalamanRokokView extends GetView<PengalamanRokokController> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 122,
                 ),
                 SizedBox(

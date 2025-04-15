@@ -21,7 +21,7 @@ class AturAkunPageView extends GetView<AturAkunPageController> {
               onPressed: () {
                 Get.back();
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_ios_rounded,
               ),
             ),

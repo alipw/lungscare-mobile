@@ -156,13 +156,13 @@ class IntroductionPage extends StatelessWidget {
               RichText(
                 text: TextSpan(
                   text: "Dengan masuk atau mendaftar, kamu menyetujui ",
-                  style: TextStyle(color: Colors.grey),
+                  style: const TextStyle(color: Colors.grey),
                   children: [
                     TextSpan(
                       text: "Ketentuan layanan",
                       style: TextStyle(color: primaryColor),
                     ),
-                    TextSpan(
+                    const TextSpan(
                       text: " dan ",
                       style: TextStyle(color: Colors.grey),
                     ),
@@ -176,7 +176,7 @@ class IntroductionPage extends StatelessWidget {
             ],
           ),
         ),
-        infiniteAutoScroll: true, 
+        infiniteAutoScroll: true,
         allowImplicitScrolling: true,
         done: const Text(""),
         onDone: () {},
@@ -189,10 +189,10 @@ class IntroductionPage extends StatelessWidget {
         controlsMargin: const EdgeInsets.symmetric(horizontal: 16),
         dotsDecorator: DotsDecorator(
           activeColor: primaryColor,
-          size: Size(10.0, 10.0),
-          color: Color(0xFFD9D9D9),
-          activeSize: Size(22.0, 10.0),
-          activeShape: RoundedRectangleBorder(
+          size: const Size(10.0, 10.0),
+          color: const Color(0xFFD9D9D9),
+          activeSize: const Size(22.0, 10.0),
+          activeShape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(25.0),
             ),

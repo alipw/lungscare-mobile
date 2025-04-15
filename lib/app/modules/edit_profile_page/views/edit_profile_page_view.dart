@@ -17,11 +17,11 @@ class EditProfilePageView extends GetView<EditProfilePageController> {
           onPressed: () {
             Get.back();
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios_new_rounded,
           ),
         ),
-        title: Text(
+        title: const Text(
           'Edit profil',
           style: TextStyle(
             color: Color(0xFF191D30),
@@ -67,7 +67,7 @@ class EditProfilePageView extends GetView<EditProfilePageController> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Nama',
                     style: TextStyle(
                       color: Color(0xFF1D1D1D),
@@ -77,7 +77,7 @@ class EditProfilePageView extends GetView<EditProfilePageController> {
                       letterSpacing: 0.40,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   TextField(
@@ -109,7 +109,7 @@ class EditProfilePageView extends GetView<EditProfilePageController> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Email',
                     style: TextStyle(
                       color: Color(0xFF1D1D1D),
@@ -119,7 +119,7 @@ class EditProfilePageView extends GetView<EditProfilePageController> {
                       letterSpacing: 0.40,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   TextField(
@@ -153,7 +153,7 @@ class EditProfilePageView extends GetView<EditProfilePageController> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Lokasi',
                     style: TextStyle(
                       color: Color(0xFF1D1D1D),
@@ -163,7 +163,7 @@ class EditProfilePageView extends GetView<EditProfilePageController> {
                       letterSpacing: 0.40,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   TextField(
@@ -196,7 +196,7 @@ class EditProfilePageView extends GetView<EditProfilePageController> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Tentang saya',
                     style: TextStyle(
                       color: Color(0xFF1D1D1D),
@@ -206,7 +206,7 @@ class EditProfilePageView extends GetView<EditProfilePageController> {
                       letterSpacing: 0.40,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   TextField(
@@ -233,7 +233,7 @@ class EditProfilePageView extends GetView<EditProfilePageController> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Padding(
@@ -247,7 +247,7 @@ class EditProfilePageView extends GetView<EditProfilePageController> {
                         borderRadius: BorderRadius.circular(8),
                       )),
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'Simpan',
                     style: TextStyle(
                       color: Colors.white,

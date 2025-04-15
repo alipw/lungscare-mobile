@@ -7,14 +7,14 @@ class DetailProgressTrackerController extends GetxController {
   List<Map<String, dynamic>> analisis = [
     {
       'title': Padding(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: Row(
           children: [
             Image.asset(
               'assets/images/icons/iconRokok.png',
               scale: 2,
             ),
-            SizedBox(
+            const SizedBox(
               width: 12,
             ),
             Text(
@@ -28,7 +28,7 @@ class DetailProgressTrackerController extends GetxController {
           ],
         ),
       ),
-      'body': Padding(
+      'body': const Padding(
         padding: EdgeInsets.all(8),
         child: Column(
           children: [
@@ -123,14 +123,14 @@ class DetailProgressTrackerController extends GetxController {
     },
     {
       'title': Padding(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: Row(
           children: [
             Image.asset(
               'assets/images/icons/iconDollar.png',
               scale: 2,
             ),
-            SizedBox(
+            const SizedBox(
               width: 12,
             ),
             Text(
@@ -144,7 +144,7 @@ class DetailProgressTrackerController extends GetxController {
           ],
         ),
       ),
-      'body': Padding(
+      'body': const Padding(
         padding: EdgeInsets.all(8),
         child: Column(
           children: [
@@ -239,14 +239,14 @@ class DetailProgressTrackerController extends GetxController {
     },
     {
       'title': Padding(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: Row(
           children: [
             Image.asset(
               'assets/images/icons/iconWaktu.png',
               scale: 2,
             ),
-            SizedBox(
+            const SizedBox(
               width: 12,
             ),
             Text(
@@ -260,7 +260,7 @@ class DetailProgressTrackerController extends GetxController {
           ],
         ),
       ),
-      'body': Padding(
+      'body': const Padding(
         padding: EdgeInsets.all(8),
         child: Column(
           children: [

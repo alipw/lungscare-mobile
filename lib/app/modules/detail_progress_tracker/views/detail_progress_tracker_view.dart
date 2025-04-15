@@ -71,7 +71,7 @@ class DetailProgressTrackerView
                             ],
                           );
                         } else {
-                          return Text('No Data');
+                          return const Text('No Data');
                         }
                       },
                     ),
@@ -93,17 +93,17 @@ class DetailProgressTrackerView
                 height: 683,
                 decoration: BoxDecoration(
                   color: white,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(40),
                     topRight: Radius.circular(40),
                   ),
                 ),
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
-                    Text(
+                    const Text(
                       'Waktu Bebas Rokok',
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -114,13 +114,13 @@ class DetailProgressTrackerView
                         letterSpacing: -0.35,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
                     Image.asset(
                       "assets/images/items/progress2.png",
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 13,
                     ),
                     Padding(
@@ -132,7 +132,7 @@ class DetailProgressTrackerView
                             width: 53,
                             height: 68,
                             decoration: ShapeDecoration(
-                              color: Color(0xFF1370FB),
+                              color: const Color(0xFF1370FB),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -161,7 +161,7 @@ class DetailProgressTrackerView
                             width: 53,
                             height: 68,
                             decoration: ShapeDecoration(
-                              color: Color(0xFF1370FB),
+                              color: const Color(0xFF1370FB),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -190,7 +190,7 @@ class DetailProgressTrackerView
                             width: 53,
                             height: 68,
                             decoration: ShapeDecoration(
-                              color: Color(0xFF1370FB),
+                              color: const Color(0xFF1370FB),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -219,7 +219,7 @@ class DetailProgressTrackerView
                             width: 53,
                             height: 68,
                             decoration: ShapeDecoration(
-                              color: Color(0xFF1370FB),
+                              color: const Color(0xFF1370FB),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -261,7 +261,6 @@ class DetailProgressTrackerView
 
 class _showAnalisyst extends StatelessWidget {
   const _showAnalisyst({
-    super.key,
     required this.controller,
   });
 
@@ -290,7 +289,7 @@ class _showAnalisyst extends StatelessWidget {
                       color: primaryColor,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   GestureDetector(

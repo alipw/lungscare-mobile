@@ -32,7 +32,7 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
               onPressed: () {
                 Get.back();
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_ios_new_rounded,
               ),
             ),
@@ -45,7 +45,7 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                 height: 537,
                 decoration: BoxDecoration(
                   color: white,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(40),
                     topRight: Radius.circular(40),
                   ),
@@ -74,10 +74,10 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
-                      Text(
+                      const Text(
                         'dr. Stefanus Lee, Sp.P(K)',
                         style: TextStyle(
                           color: Color(0xFF00060F),
@@ -87,7 +87,7 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                           letterSpacing: -0.35,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "Spesialis Pulmonologi dan Kedokteran Respirasi",
                         style: TextStyle(
                           color: Color(0xFF808B9A),
@@ -96,16 +96,16 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 6,
                       ),
                       Divider(
                         color: Colors.grey[300],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
-                      Text(
+                      const Text(
                         'Tentang',
                         style: TextStyle(
                           color: Color(0xFF00060F),
@@ -114,7 +114,7 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      Text(
+                      const Text(
                         'dr. Stefanus Lee, Sp.P(K) merupakan seorang dokter spesialis paru yang praktik di Bandung. Dengan keahlian yang mendalam dan pengalaman yang luas, dr. Stefanus Lee menempatkan pelayanan dan perhatian kepada pasien di garis depan praktiknya.',
                         style: TextStyle(
                           color: Color(0xFF808B9A),
@@ -123,13 +123,13 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             'Pilih tanggal',
                             style: TextStyle(
                               color: Color(0xFF120A0A),
@@ -172,10 +172,10 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
-                      Text(
+                      const Text(
                         "Pilih Jam",
                         style: TextStyle(
                           color: Color(0xFF120A0A),
@@ -184,14 +184,14 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SelectJam(),
-                      SizedBox(
+                      const SelectJam(),
+                      const SizedBox(
                         height: 24,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Text(
                                 "IDR",
@@ -246,10 +246,10 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                                           Image.asset(
                                             "assets/images/items/done.png",
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 39,
                                           ),
-                                          Text(
+                                          const Text(
                                             'Pembayaran Berhasil',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
@@ -261,10 +261,10 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                                               decoration: TextDecoration.none,
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 10,
                                           ),
-                                          Text(
+                                          const Text(
                                             'Kamu bisa langsung melakukan konsultasi dengan dokter pilihanmu.',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
@@ -275,7 +275,7 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                                               decoration: TextDecoration.none,
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 31,
                                           ),
                                           SizedBox(
@@ -291,7 +291,7 @@ class JadwalKonsultasiView extends GetView<JadwalKonsultasiController> {
                                               onPressed: () {
                                                 Get.back();
                                               },
-                                              child: Text(
+                                              child: const Text(
                                                 "Lanjutkan",
                                                 style: TextStyle(
                                                   color: Colors.white,
@@ -373,7 +373,7 @@ class SelectJam extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 9,
             ),
             GestureDetector(
@@ -408,7 +408,7 @@ class SelectJam extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 9,
             ),
             GestureDetector(
@@ -492,7 +492,7 @@ class SelectKam extends StatelessWidget {
                         fontSize: 15,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -558,7 +558,7 @@ class SelectJum extends StatelessWidget {
                         fontSize: 15,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -624,7 +624,7 @@ class SelectSab extends StatelessWidget {
                         fontSize: 15,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -690,7 +690,7 @@ class SelectMin extends StatelessWidget {
                         fontSize: 15,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -756,7 +756,7 @@ class SelectSen extends StatelessWidget {
                         fontSize: 15,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -822,7 +822,7 @@ class SelectSel extends StatelessWidget {
                         fontSize: 15,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -888,7 +888,7 @@ class SelectRab extends StatelessWidget {
                         fontSize: 15,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(

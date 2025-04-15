@@ -10,7 +10,7 @@ class Splash1View extends GetView<Splash1Controller> {
   const Splash1View({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(seconds: 2), (() {
+    Future.delayed(const Duration(seconds: 2), (() {
       Get.offAllNamed(Routes.SPLASH2);
     }));
     return Scaffold(
