@@ -20,8 +20,8 @@ class ChatMessage {
 class ChatPageController extends GetxController {
   // API key untuk OpenRouter.ai
   final String apiKey =
-      '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'; // Ganti dengan API key Anda
-  final String baseUrl = 'https://openrouter.ai/api/v1/chat/completions';
+      'AIzaSyB7XxW-Id5JLdFYd4NfZjOZ-jZj04QGaus'; // Ganti dengan API key Anda
+  final String baseUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent'; // Updated for Gemini (gemini-2.0-flash)
 
   final RxList<ChatMessage> messages = <ChatMessage>[].obs;
   final RxBool isLoading = false.obs;
@@ -42,27 +42,10 @@ class ChatPageController extends GetxController {
   }
 
   // Respons fallback untuk pertanyaan umum
-  final Map<String, String> _fallbackResponses = {
-    'merokok':
-        'Merokok sangat berbahaya bagi kesehatan paru-paru. Merokok dapat menyebabkan kanker paru-paru, PPOK, dan berbagai penyakit pernapasan lainnya. Sebaiknya hindari merokok dan lingkungan yang terpapar asap rokok.',
-    'asma':
-        'Asma adalah kondisi kronis yang menyebabkan saluran udara di paru-paru menjadi sempit dan bengkak, serta memproduksi lendir tambahan. Ini dapat menyebabkan kesulitan bernapas, batuk, dan mengi. Penting untuk mengikuti rencana pengobatan yang diberikan oleh dokter Anda.',
-    'covid':
-        'COVID-19 dapat mempengaruhi paru-paru dan menyebabkan pneumonia. Gejala umum termasuk batuk, demam, dan kesulitan bernapas. Jika Anda mengalami gejala, segera lakukan tes dan konsultasikan dengan dokter.',
-    'olahraga':
-        'Olahraga teratur dapat meningkatkan kapasitas paru-paru dan kesehatan pernapasan secara keseluruhan. Aktivitas seperti berjalan, berenang, dan bersepeda sangat baik untuk kesehatan paru-paru.',
-  };
+  // Fallback logic removed
 
   // Metode untuk mencari respons fallback
-  String? _findFallbackResponse(String text) {
-    final lowercaseText = text.toLowerCase();
-    for (final entry in _fallbackResponses.entries) {
-      if (lowercaseText.contains(entry.key)) {
-        return entry.value;
-      }
-    }
-    return null;
-  }
+  // Fallback logic removed
 
   Future<void> sendMessage(String text) async {
     if (text.trim().isEmpty) return;
@@ -79,47 +62,54 @@ class ChatPageController extends GetxController {
     // Mulai loading
     isLoading.value = true;
 
-    // Coba cari respons fallback terlebih dahulu
-    final fallbackResponse = _findFallbackResponse(text);
-    if (fallbackResponse != null) {
-      // Gunakan respons fallback jika ada
-      messages.add(
-        ChatMessage(
-          id: _uuid.v4(),
-          text: fallbackResponse,
-          isUser: false,
-          timestamp: DateTime.now(),
-        ),
-      );
-      isLoading.value = false;
-      return;
-    }
+    // Fallback logic removed
 
     try {
+      // Construct messages for Gemini API
+      List<Map<String, dynamic>> constructedContents = [];
+      // Add system prompt
+      constructedContents.add({
+        'role': 'user',
+        'parts': [{'text': 'Anda adalah asisten kesehatan paru-paru yang membantu pengguna berhenti merokok dan memberikan informasi tentang kesehatan paru-paru.'}]
+      });
+
+      // Add all existing messages from the observable list (including the latest user message)
+      for (var chatMessage in messages) {
+        constructedContents.add({
+          'role': chatMessage.isUser ? 'user' : 'model',
+          'parts': [{'text': chatMessage.text}]
+        });
+      }
+
       final response = await http.post(
-        Uri.parse(baseUrl),
+        Uri.parse('$baseUrl?key=$apiKey'), // Append API key as a query parameter for Gemini
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer $apiKey',
-          'HTTP-Referer': 'https://lungscare.com',
         },
         body: jsonEncode({
-          'model':
-              'openai/gpt-3.5-turbo', // Atau model lain yang tersedia di OpenRouter
-          'messages': [
-            {
-              'role': 'system',
-              'content':
-                  'Anda adalah asisten kesehatan paru-paru yang membantu pengguna berhenti merokok dan memberikan informasi tentang kesehatan paru-paru.'
-            },
-            {'role': 'user', 'content': text}
-          ],
+          'contents': constructedContents,
+          // Added generationConfig for safety settings, optional but good practice
+          'generationConfig': {
+            'temperature': 0.9,
+            'topK': 1,
+            'topP': 1,
+            'maxOutputTokens': 2048,
+            'stopSequences': []
+          },
+          'safetySettings': [
+            {'category': 'HARM_CATEGORY_HARASSMENT', 'threshold': 'BLOCK_MEDIUM_AND_ABOVE'},
+            {'category': 'HARM_CATEGORY_HATE_SPEECH', 'threshold': 'BLOCK_MEDIUM_AND_ABOVE'},
+            {'category': 'HARM_CATEGORY_SEXUALLY_EXPLICIT', 'threshold': 'BLOCK_MEDIUM_AND_ABOVE'},
+            {'category': 'HARM_CATEGORY_DANGEROUS_CONTENT', 'threshold': 'BLOCK_MEDIUM_AND_ABOVE'}
+          ]
         }),
       );
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        final botResponse = data['choices'][0]['message']['content'];
+        // Adjust response parsing for Gemini API
+        // final botResponse = data['choices'][0]['message']['content'];
+        final botResponse = data['candidates'][0]['content']['parts'][0]['text'];
 
         // Tambahkan respons bot ke daftar pesan
         messages.add(
@@ -136,7 +126,7 @@ class ChatPageController extends GetxController {
           ChatMessage(
             id: _uuid.v4(),
             text:
-                'Maaf, terjadi kesalahan. Silakan coba lagi nanti. (Kode: ${response.statusCode})',
+                'Maaf, terjadi kesalahan. Silakan coba lagi nanti. (Kode: ${json.encode(response.body)})',
             isUser: false,
             timestamp: DateTime.now(),
           ),
