@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:motion_hack/app/controllers/auth_controller.dart';
 import 'package:motion_hack/app/routes/app_pages.dart';
 import 'package:motion_hack/app/shared/theme/color.dart';
-import 'package:motion_hack/app/shared/widget/card_doctor.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -12,7 +11,7 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    final authC = Get.find<AuthController>(); 
+    final authC = Get.find<AuthController>();
     return Scaffold(
       body: Stack(
         children: [
@@ -408,23 +407,18 @@ class HomeView extends GetView<HomeController> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
-                        "Konsultasi",
+                        "Berita LungsCare",
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Get.toNamed(Routes.KONSULTASI);
-                        },
-                        child: Text(
-                          "Lihat semua",
-                          style: TextStyle(
-                            color: primaryColor,
-                            fontSize: 12,
-                          ),
+                      Text(
+                        "Lihat semua",
+                        style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 12,
                         ),
                       ),
                     ],
@@ -432,20 +426,134 @@ class HomeView extends GetView<HomeController> {
                   const SizedBox(
                     height: 20,
                   ),
-                  CardDoctor(
-                    name: "dr. Stefanus Lee, Sp.P(K)",
-                    description:
-                        "Spesialis Pulmonologi dan\nKedokteran Respirasi",
-                    harga: "30.000",
-                    image: "stefanus",
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        // Kartu berita pertama - Perbandingan paru-paru
+                        GestureDetector(
+                          onTap: () {
+                            // Tampilkan detail artikel jika diperlukan
+                          },
+                          child: Container(
+                            width: 200,
+                            height: 280,
+                            margin: const EdgeInsets.only(right: 15),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFB6DDFF), // Warna biru muda
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                              children: [
+                                ClipRRect(
+                                  borderRadius: const BorderRadius.only(
+                                    topLeft: Radius.circular(20),
+                                    topRight: Radius.circular(20),
+                                  ),
+                                  child: Container(
+                                    padding: const EdgeInsets.all(10),
+                                    child: Image.asset(
+                                      "assets/images/items/healthy_vs_smoker_lungs.png",
+                                      height: 150,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(12),
+                                  child: Text(
+                                    "Memahami Perbedaan Perokok Aktif ...",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black87,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        // Kartu berita kedua - Stop Merokok
+                        GestureDetector(
+                          onTap: () {
+                            // Tampilkan detail artikel jika diperlukan
+                          },
+                          child: Container(
+                            width: 200,
+                            height: 280,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFB6DDFF), // Warna biru muda
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                              children: [
+                                ClipRRect(
+                                  borderRadius: const BorderRadius.only(
+                                    topLeft: Radius.circular(20),
+                                    topRight: Radius.circular(20),
+                                  ),
+                                  child: Container(
+                                    padding: const EdgeInsets.all(10),
+                                    color: const Color(
+                                        0xFFFFC278), // Warna oranye muda
+                                    child: Column(
+                                      children: [
+                                        const Text(
+                                          "BAHAYA MEROKOK",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 14,
+                                          ),
+                                        ),
+                                        Image.asset(
+                                          "assets/images/items/no_smoking.png",
+                                          height: 100,
+                                          fit: BoxFit.contain,
+                                        ),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(
+                                            horizontal: 10,
+                                            vertical: 5,
+                                          ),
+                                          decoration: BoxDecoration(
+                                            border:
+                                                Border.all(color: Colors.white),
+                                            borderRadius:
+                                                BorderRadius.circular(5),
+                                          ),
+                                          child: const Text(
+                                            "STOP MEROKOK!!!",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(12),
+                                  child: Text(
+                                    "Memahami Perbedaan Perokok Aktif ...",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black87,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  CardDoctor(
-                    name: "dr. Agita Meisha, Sp.P(K)",
-                    description:
-                        "Spesialis Pulmonologi dan\nKedokteran Respirasi",
-                    harga: "45.000",
-                    image: "agita",
-                  )
                 ],
               ),
             ),
