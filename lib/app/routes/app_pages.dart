@@ -40,6 +40,12 @@ import '../modules/splash1/bindings/splash1_binding.dart';
 import '../modules/splash1/views/splash1_view.dart';
 import '../modules/splash2/bindings/splash2_binding.dart';
 import '../modules/splash2/views/splash2_view.dart';
+import '../modules/berita_page/bindings/berita_page_binding.dart';
+import '../modules/berita_page/views/berita_page_view.dart';
+import '../modules/detail_artikel_dua_page/bindings/detail_artikel_dua_binding.dart';
+import '../modules/detail_artikel_dua_page/views/detail_artikel_dua_view.dart';
+import '../modules/detail_artikel_satu_page/bindings/detail_artikel_satu_binding.dart';
+import '../modules/detail_artikel_satu_page/views/detail_artikel_satu_view.dart';
 
 part 'app_routes.dart';
 
@@ -148,6 +154,21 @@ class AppPages {
       name: _Paths.NAVIGATION,
       page: () => const NavigationView(),
       binding: NavigationBinding(),
+    ),
+    GetPage(
+      name: _Paths.BERITA_PAGE,
+      page: () => const BeritaPageView(),
+      binding: BeritaPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAIL_ARTIKEL_SATU_PAGE,
+      page: () => const DetailArtikelSatuView(),
+      binding: DetailArtikelSatuBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAIL_ARTIKEL_DUA_PAGE,
+      page: () => const DetailArtikelDuaView(),
+      binding: DetailArtikelDuaBinding(),
     ),
   ];
 }

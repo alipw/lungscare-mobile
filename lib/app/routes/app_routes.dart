@@ -23,6 +23,9 @@ abstract class Routes {
   static const SPLASH1 = _Paths.SPLASH1;
   static const SPLASH2 = _Paths.SPLASH2;
   static const NAVIGATION = _Paths.NAVIGATION;
+  static const BERITA_PAGE = _Paths.BERITA_PAGE;
+  static const DETAIL_ARTIKEL_SATU_PAGE = _Paths.DETAIL_ARTIKEL_SATU_PAGE;
+  static const DETAIL_ARTIKEL_DUA_PAGE = _Paths.DETAIL_ARTIKEL_DUA_PAGE;
 }
 
 abstract class _Paths {
@@ -47,4 +50,7 @@ abstract class _Paths {
   static const SPLASH1 = '/splash1';
   static const SPLASH2 = '/splash2';
   static const NAVIGATION = '/navigation';
+  static const BERITA_PAGE = '/berita-page';
+  static const DETAIL_ARTIKEL_SATU_PAGE = '/detail-artikel-satu-page';
+  static const DETAIL_ARTIKEL_DUA_PAGE = '/detail-artikel-dua-page';
 }

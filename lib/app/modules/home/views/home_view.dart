@@ -414,11 +414,16 @@ class HomeView extends GetView<HomeController> {
                           fontSize: 16,
                         ),
                       ),
-                      Text(
-                        "Lihat semua",
-                        style: TextStyle(
-                          color: primaryColor,
-                          fontSize: 12,
+                      GestureDetector(
+                        onTap: () {
+                          Get.toNamed(Routes.BERITA_PAGE);
+                        },
+                        child: Text(
+                          "Lihat semua",
+                          style: TextStyle(
+                            color: primaryColor,
+                            fontSize: 12,
+                          ),
                         ),
                       ),
                     ],
@@ -433,7 +438,7 @@ class HomeView extends GetView<HomeController> {
                         // Kartu berita pertama - Perbandingan paru-paru
                         GestureDetector(
                           onTap: () {
-                            // Tampilkan detail artikel jika diperlukan
+                            Get.toNamed(Routes.DETAIL_ARTIKEL_SATU_PAGE);
                           },
                           child: Container(
                             width: 200,
@@ -478,7 +483,7 @@ class HomeView extends GetView<HomeController> {
                         // Kartu berita kedua - Stop Merokok
                         GestureDetector(
                           onTap: () {
-                            // Tampilkan detail artikel jika diperlukan
+                            Get.toNamed(Routes.DETAIL_ARTIKEL_DUA_PAGE);
                           },
                           child: Container(
                             width: 200,
